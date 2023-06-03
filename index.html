@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Carless travel</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="img/png" href="img/favicon.png" />
+  </head>
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <body>
+    <!-- この中に記述していく -->
+    <!-- ここから下にコードを書く -->
+    <div id="home">
+      <header class="page-header wrapper">
+        <div class="logo-area">
+          <a href="index.html"
+            ><img class="logo" src="img/logo.jpg" alt="Carlesstravelホーム"
+          /></a>
+        </div>
+        <div class="space-area"></div>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="plan.html">PLAN</a></li>
+            <li><a href="index.html">GAME</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="wrapper">
+      <article>
+        <div id="main01">
+          <div class="main-content">
+            <h1 class="main-title">Let's Enjoy!</h1>
+            <p>懐かしのキャラでほっこりしましょう</p>
+          </div>
+        </div>
+        <div id="game" class="contents">
+          <h2 class="title">GAME</h2>
+          <p class="sub-title">
+            まずは、勝負する相手を選んでね<br />懐かしのあの人が変身しているよ
+          </p>
+          <div class="chara-container">
+            <div class="chara-select">
+              <div class="game-img01" id="s01">
+                <img src="img/game_061.png" alt="コニーちゃん" />
+              </div>
+              <div>
+                <p class="chara-title">ブルー</p>
+                平日朝の顔と言ったらこの人！
+                <br /><br />
+                <a href="https://www.gachapin-mukku.com/character/connie.html"
+                  >【変身前】ガチャピンムックオフィシャルサイト
+                </a>
+              </div>
+            </div>
+            <div class="chara-select">
+              <div class="game-img01" id="s02">
+                <img src="img/game_062.png" alt="サザエさん" />
+              </div>
+              <div>
+                <p class="chara-title">イエロー</p>
+                毎週日曜日の夜の顔と言ったらこの人！
+                <br /><br />
+                <a href="http://www.sazaesan.jp/characters.html"
+                  >【変身前】サザエさん公式ホームページ</a
+                >
+              </div>
+            </div>
+            <div class="chara-select">
+              <div class="game-img01" id="s03">
+                <img src="img/game_063.png" alt="ドラえもん" />
+              </div>
+              <div>
+                <p class="chara-title">レッド</p>
+                グーのプロと言ったらこの人！
+                <br /><br />
+                <a href="https://dora-world.com/characters/doraemon"
+                  >【変身前】ドラえもん公式サイト</a
+                >
+              </div>
+            </div>
+            <div class="chara-select">
+              <div class="game-img01" id="s04">
+                <img src="img/game_064.png" alt="バルタン星人" />
+              </div>
+              <div>
+                <p class="chara-title">グリーン</p>
+                チョキのプロと言ったらこの人！
+                <br /><br />
+                <a href="https://store.m-78.jp/products/4562293999684"
+                  >【変身前】ツブラヤストア</a
+                >
+              </div>
+            </div>
+            <div class="chara-select">
+              <div class="game-img01" id="s05">
+                <img src="img/game_065.png" alt="セーラーマーキュリー" />
+              </div>
+              <div>
+                <p class="chara-title">ピンク</p>
+                パーのプロと言ったらこの人！
+                <br /><br />
+                <a
+                  href="https://www.animatetimes.com/news/details.php?id=1606881714"
+                  >【変身前】アニメイトタイムズ</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="chara-set"></div>
+          <p class="sub-title">次に、あなたの手を選んでね</p>
+          <div class="hand-container">
+            <div class="hand-select" id="i01">
+              <div class="game-img02">
+                <img src="img/janken_gu.png" alt="グー" />
+              </div>
+            </div>
+            <div class="hand-select" id="i02">
+              <div class="game-img02">
+                <img src="img/janken_choki.png" alt="チョキ" />
+              </div>
+            </div>
+            <div class="hand-select" id="i03">
+              <div class="game-img02">
+                <img src="img/janken_pa.png" alt="パー" />
+              </div>
+            </div>
+          </div>
+          <div class="item-set"></div>
+          <div class="game-set01"></div>
+          <div class="game-set02"></div>
+          <div class="result"></div>
+          <div class="result-connie">
+            あなたの過去最高勝率（5戦以上）　<span class="result01"> 0</span>％
+          </div>
+          <div class="change-area">
+            <a
+              input
+              type="button"
+              class="button"
+              onclick="window.location.reload();"
+              >対戦相手を変える</a
+            >
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      <div class="wrapper">
+        <p>
+          <small>&copy;2023 Yu Fujita</small>
+        </p>
+      </div>
+    </footer>
+    <!-- ここから上にコードを書く -->
+    <!-- この中に記述していく -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

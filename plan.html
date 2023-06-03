@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Carless travel</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="img/png" href="img/favicon.png" />
+  </head>
+  <!-- 最初の設定は終わっています　必要な方は触ってください -->
+
+  <body>
+    <!-- この中に記述していく -->
+    <!-- ここから下にコードを書く -->
+    <div id="home">
+      <header class="page-header wrapper">
+        <div class="logo-area">
+          <a href="index.html"
+            ><img class="logo" src="img/logo.jpg" alt="Carlesstravelホーム"
+          /></a>
+        </div>
+        <div class="space-area"></div>
+        <nav>
+          <ul class="main-nav">
+            <li><a href="plan.html">PLAN</a></li>
+            <li><a href="index.html">GAME</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <div class="wrapper">
+      <article>
+        <div id="main00">
+          <div class="main-content">
+            <h1 class="main-title">Enjoy your freedom</h1>
+            <p>自動車運転なしの自由気ままな一人旅に出ましょう</p>
+          </div>
+        </div>
+        <div id="plan" class="contents">
+          <h2 class="title">PLAN</h2>
+          <p class="sub-title">
+            あなたはどんな一人旅に出ようとしていますか？自由にメモしましょう。<br />「全削除」をクリックすると3項目が削除されるのでご注意ください。
+          </p>
+          <div class="memo-container">
+            <div class="memo-select">
+              <p>期間や時期</p>
+              <textarea name="text-all" class="text01"></textarea>
+            </div>
+            <div class="memo-select">
+              <p>今回の旅におけるゆずれないこと</p>
+              <textarea name="text-all" class="text02"></textarea>
+            </div>
+            <div class="memo-select">
+              <p>今回の旅における不安なこと</p>
+              <textarea name="text-all" class="text03"></textarea>
+            </div>
+          </div>
+          <div class="save-area">
+            <a input type="button" class="button save">保存</a>
+            <a input type="button" class="button delete">全削除</a>
+          </div>
+        </div>
+        <div id="quiz" class="contents">
+          <h2 class="title">QUIZ</h2>
+          <p class="qs-number">ここに問題番号が表示されます</p>
+          <p class="quest">ここに質問が表示されます。</p>
+          <p>
+            <input type="radio" name="toi" value="1" /><span class="toi01"
+              >選択肢１</span
+            >
+            <input type="radio" name="toi" value="2" /><span class="toi02"
+              >選択肢２</span
+            >
+            <input type="radio" name="toi" value="3" /><span class="toi03"
+              >選択肢３</span
+            >
+            <input type="radio" name="toi" value="4" /><span class="toi04"
+              >選択肢４</span
+            >
+          </p>
+        </div>
+        <div id="map" class="contents">
+          <h2 class="title">Latitude Longitude</h2>
+          <div class="map"></div>
+          <div id="myMap" style="width: 96vw; height: 400px"></div>
+          <script
+            src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=削除"
+            async
+            defer
+          ></script>
+          <script>
+            function GetMap() {
+              const map = new Microsoft.Maps.Map("#myMap", {
+                center: new Microsoft.Maps.Location(
+                  43.59575287020896,
+                  142.46940614130773
+                ),
+                mapTypeId: Microsoft.Maps.MapTypeId.load,
+                zoom: 8,
+              });
+
+              let center = map.getCenter();
+
+              let pin = new Microsoft.Maps.Pushpin(center, {
+                color: "magenta",
+                draggable: true,
+                enableClickedStyle: true,
+                enabledHoverStyle: true,
+                visible: true,
+                title: "おすすめの宿",
+                subTitle: "結び家",
+                text: "ココ",
+              });
+
+              map.entities.push(pin);
+            }
+          </script>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <div class="wrapper">
+        <p>
+          <small>&copy;2023 Yu Fujita</small>
+        </p>
+      </div>
+    </footer>
+    <!-- ここから上にコードを書く -->
+    <!-- この中に記述していく -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

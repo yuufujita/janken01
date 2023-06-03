@@ -1,0 +1,364 @@
+/* ここから下に記載していく */
+@charset "UTF-8";
+
+/* 共通部分
+---------------------------- */
+html,
+header {
+  max-width: 100vw;
+  font-size: 100%;
+}
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic",
+    "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #222222;
+}
+a {
+  text-decoration: none;
+}
+p {
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  text-align: center;
+}
+.contents {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  max-width: 100%;
+  margin: 0px 2%;
+}
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+.sub-title {
+  margin-bottom: 30px;
+}
+
+/* 共通部分（ヘッダー）
+---------------------------- */
+#home {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+  border-bottom: 1px solid #707070;
+}
+#home a {
+  margin: 0;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  padding: 2vh 2vw 0 2vw;
+}
+.logo-area {
+  padding: 0;
+  width: 32vw;
+  max-height: 100%;
+}
+@media (max-width: 600px) {
+  .logo-area {
+    padding: 0;
+    width: 48vw;
+    max-height: 100%;
+  }
+}
+.logo {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.space-area {
+  width: 32vw;
+}
+@media (max-width: 600px) {
+  .space-area {
+    display: none;
+  }
+}
+.main-nav {
+  display: flex;
+  justify-content: center;
+  width: 32vw;
+  padding: 2vh 0;
+  font-size: 21px;
+  list-style: none;
+}
+@media (max-width: 600px) {
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    width: 48vw;
+    padding: 1vh;
+    font-size: 18px;
+    list-style: none;
+  }
+}
+.main-nav li {
+  margin-left: 50px;
+}
+@media (max-width: 600px) {
+  .main-nav li {
+    margin-left: 30px;
+  }
+}
+.main-nav a {
+  color: #222222;
+}
+.main-nav a:hover {
+  color: #0bd;
+}
+
+/* 共通部分（ボタン）
+---------------------------- */
+.button {
+  font-size: 20px;
+  background: maroon;
+  color: #fff;
+  padding: 10px 80px;
+  margin: 10px;
+}
+@media (max-width: 600px) {
+  .button {
+    font-size: 20px;
+    background: maroon;
+    color: #fff;
+    padding: 10px 10px;
+    margin: 5px;
+  }
+}
+.button:hover {
+  background: #0090aa;
+}
+.button:disabled {
+  background: #ccc;
+}
+
+/* 共通部分（メインビジュアル_じゃんけんアプリ、Enjoy your freedom）
+---------------------------- */
+#main00 {
+  margin-top: 10vh;
+  background-image: url(../img/travel_000.jpg), linear-gradient(white, #97cdf3);
+  background-color: #e6f0f0;
+  background-blend-mode: hard-light;
+  height: 40vh;
+  color: black;
+  position: relative;
+  min-width: 100vw;
+  background-size: cover;
+  z-index: 100;
+}
+#main01 {
+  margin-top: 10vh;
+  background-image: url(../img/travel_001.jpg), linear-gradient(white, #97cdf3);
+  background-color: #e6f0f0;
+  background-blend-mode: hard-light;
+  height: 250px;
+  color: black;
+  position: relative;
+  min-width: 100vw;
+  background-size: cover;
+  z-index: 100;
+}
+.main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-title {
+  font-family: "philosopher", serif;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+@media (max-width: 600px) {
+  .main-title {
+    font-family: "philosopher", serif;
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+.main-content p {
+  font-size: 18px;
+}
+@media (max-width: 600px) {
+  .main-content p {
+    font-size: 15px;
+  }
+}
+
+/* PLAN（Enjoy your freedom）
+---------------------------- */
+@media (max-width: 600px) {
+  #plan,
+  #quiz {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    max-width: 100%;
+    margin: 0px 5%;
+  }
+}
+#plan .title,
+#quiz .title,
+#map .title {
+  color: navy;
+  margin-bottom: 10px;
+}
+.memo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .memo-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
+.memo-select {
+  width: 25vw;
+  text-align: center;
+  margin: 0 10px;
+}
+textarea {
+  width: 25vw;
+  height: 100px;
+  border: solid 1px lightgray;
+  text-align: left;
+  background: linear-gradient(90deg, rgb(246, 215, 243), rgb(194, 230, 247));
+}
+@media (max-width: 600px) {
+  .memo-select {
+    width: 80vw;
+    text-align: center;
+    margin: 0 10px;
+  }
+  textarea {
+    width: 80vw;
+    height: 100px;
+    border: solid 1px lightgray;
+    text-align: left;
+    background: linear-gradient(90deg, rgb(246, 215, 243), rgb(194, 230, 247));
+  }
+}
+.save-area {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+/* GAME（じゃんけんアプリ）
+---------------------------- */
+#game .title {
+  color: maroon;
+  margin-bottom: 30px;
+}
+.chara-container,
+.hand-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .chara-container,
+  .hand-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.chara-select,
+.hand-select {
+  width: 150px;
+  text-align: left;
+  margin: 0 15px;
+}
+@media (max-width: 600px) {
+  .chara-select,
+  .hand-select {
+    width: 150px;
+    text-align: left;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border: 1px solid lightgray;
+  }
+}
+.game-img01,
+.game-img02 {
+  width: 150px;
+  height: 150px;
+  transition: all 0.2s;
+}
+.game-img01 img,
+.game-img02 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.game-img01:hover,
+.game-img02:hover {
+  border: dotted 5px maroon;
+  transform: scale(1.3, 1.3);
+  cursor: pointer;
+}
+.game-img01 img,
+.game-img02 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.chara-title {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 24px;
+}
+.chara-set,
+.item-set {
+  font-weight: bold;
+  font-size: 130%;
+  color: magenta;
+  margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .game-set01 iframe {
+    width: 80vw;
+  }
+}
+.change-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+.result-connie {
+  display: none;
+  color: #800000;
+  font-size: 130%;
+  font-weight: bold;
+}
+
+/* フッター
+---------------------------- */
+footer {
+  background: #707070;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer p {
+  color: #fff;
+  font-size: 0.875rem;
+}
